@@ -869,7 +869,14 @@ reactionText: {
     marginTop: 4,
   },
 
-      activeNavText: {
+    const styles = StyleSheet.create({
+
+  ...
+
+  activeNavText: {
+
     color: '#FFFFFF',
+
   },
+
 });
