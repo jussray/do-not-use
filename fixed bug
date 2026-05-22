@@ -261,11 +261,12 @@ const BottomNav = () => (
       </Animated.View>
 
       <View style={styles.messageCard}>
-
-        <Text style={styles.cardEmoji}>🫧</Text>
+        <Text style={styles.cardEmoji}>
+          {comfortMessages[messageIndex].emoji}
+        </Text>
 
         <Text style={styles.cardText}>
-          Inhale. Hold. Exhale. Stay with the Bip.
+          {comfortMessages[messageIndex].text}
         </Text>
 
         <TouchableOpacity
@@ -278,51 +279,26 @@ const BottomNav = () => (
         </TouchableOpacity>
 
         <View style={styles.entryCard}>
-          <Text style={styles.entryText}>
-            🫧 Unclench your jaw.
-          </Text>
-
-          <Text style={styles.entryText}>
-            🌙 Relax your shoulders.
-          </Text>
-
-          <Text style={styles.entryText}>
-            💧 Drink some water.
-          </Text>
-
-          <Text style={styles.entryText}>
-            📵 Step away from the noise for a minute.
-          </Text>
+          <Text style={styles.entryText}>🫧 Unclench your jaw.</Text>
+          <Text style={styles.entryText}>🌙 Relax your shoulders.</Text>
+          <Text style={styles.entryText}>💧 Drink some water.</Text>
+          <Text style={styles.entryText}>📵 Step away from the noise for a minute.</Text>
         </View>
-
       </View>
 
-      <Text style={styles.sectionTitle}>
-        🌙 Quick Resets
-      </Text>
+      <Text style={styles.sectionTitle}>🌙 Quick Resets</Text>
 
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>
-          🌙 Start 7-Min Mind Reset
-        </Text>
+        <Text style={styles.buttonText}>🌙 Start 7-Min Mind Reset</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>
-          🫧 Start 7-Min Body Reset
-        </Text>
+        <Text style={styles.buttonText}>🫧 Start 7-Min Body Reset</Text>
       </TouchableOpacity>
 
       <View style={styles.entryCard}>
-
-        <Text style={styles.entryText}>
-          🌙 Mind Reset helps slow racing thoughts.
-        </Text>
-
-        <Text style={styles.entryText}>
-          🫧 Body Reset helps release stress physically.
-        </Text>
-
+        <Text style={styles.entryText}>🌙 Mind Reset helps slow racing thoughts.</Text>
+        <Text style={styles.entryText}>🫧 Body Reset helps release stress physically.</Text>
       </View>
 
       <BottomNav />
