@@ -870,6 +870,6 @@ reactionText: {
   },
 
     activeNavText: {
-    color: '#FFFFFF',
+        color: '#FFFFFF',
   },
-});
+};
