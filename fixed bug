@@ -631,7 +631,14 @@ if (screen === 'circle') {
         <Text style={styles.buttonText}>Post to Circle ✨</Text>
       </TouchableOpacity>
 
-      <Text style={styles.sectionTitle}>Recent Bips</Text>
+      <TouchableOpacity
+  style={styles.button}
+  onPress={() => setScreen('bity')}
+>
+  <Text style={styles.buttonText}>🏙️ My Bity</Text>
+</TouchableOpacity>
+      
+  <Text style={styles.sectionTitle}>Recent Bips</Text>
 
       {circlePosts.length === 0 ? (
         <View style={styles.entryCard}>
@@ -917,12 +924,7 @@ if (screen === 'bity') {
         <Text style={styles.buttonText}>🌐 Bip Circle</Text>
       </TouchableOpacity>
       
-      <TouchableOpacity
-  style={styles.button}
-  onPress={() => setScreen('bity')}
->
-  <Text style={styles.buttonText}>🏙️ My Bity</Text>
-</TouchableOpacity>
+    
       <TouchableOpacity
         style={styles.button}
         onPress={() => setScreen('comfort')}
