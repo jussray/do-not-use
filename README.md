@@ -1,5 +1,5 @@
 # Se-kret-Bip
-1 import React, { useState, useEffect, useRef } from 'react'; 
+ import React, { useState, useEffect, useRef } from 'react'; 
  import {
   Text,
   StyleSheet,
