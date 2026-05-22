@@ -243,8 +243,8 @@ const BottomNav = () => (
     return (
       <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
         <Text style={styles.logo}>Se’kret Bip</Text>
-        <Text style={styles.welcome}>Calm Space 🌙</Text>
-        <Text style={styles.subtitle}>Breathe slowly. You are safe here.</Text>
+       <Text style={styles.welcome}>🌙 Bip Calmly</Text>
+       <Text style={styles.subtitle}>Stay here a sec.</Text>
 
  <Animated.View style={[styles.circle, { transform: [{ scale: breatheAnim }] }]}>
           <Text style={styles.circleText}>Breathe</Text>
@@ -253,6 +253,14 @@ const BottomNav = () => (
         <View style={styles.messageCard}>
           <Text style={styles.cardEmoji}>🫧</Text>
           <Text style={styles.cardText}>Inhale. Hold. Exhale. Stay with the Bip.</Text>
+<TouchableOpacity
+  style={styles.smallButton}
+  onPress={changeMessage}
+>
+  <Text style={styles.smallButtonText}>
+    Another Calm Thought ✨
+  </Text>
+</TouchableOpacity>
         </View>
 
         <BottomNav />
