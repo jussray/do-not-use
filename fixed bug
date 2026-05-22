@@ -361,7 +361,13 @@ if (screen === 'mindReset') {
         <Text style={styles.entryText}>6️⃣ Remind yourself: I do not have to solve everything tonight.</Text>
         <Text style={styles.entryText}>7️⃣ One more breath. I’m still here.</Text>
       </View>
+      <View style={styles.messageCard}>
+  <Text style={styles.cardEmoji}>✨</Text>
 
+  <Text style={styles.cardText}>
+    Reset complete when your body feels even 1% softer.
+  </Text>
+</View>
       <TouchableOpacity style={styles.button} onPress={() => setScreen('calm')}>
         <Text style={styles.buttonText}>Back to Bip Calmly 🌙</Text>
       </TouchableOpacity>
