@@ -183,9 +183,6 @@ const reactToPost = (postId, reactionType) => {
 };
 
 const changeMessage = () => {
-
-
-const changeMessage = () => {
   setMessageIndex((prevIndex) => (prevIndex + 1) % comfortMessages.length);
 };
   
