@@ -740,6 +740,98 @@ cardText: {
   lineHeight: 34,
   marginBottom: 24,
 },
+  messageCard: {
+  width: '100%',
+  backgroundColor: '#1E293B',
+  padding: 24,
+  borderRadius: 30,
+  marginBottom: 28,
+  alignItems: 'center',
+},
+
+button: {
+  backgroundColor: '#3B82F6',
+  width: '100%',
+  paddingVertical: 18,
+  borderRadius: 22,
+  alignItems: 'center',
+  marginBottom: 22,
+},
+
+smallButton: {
+  backgroundColor: '#334155',
+  paddingVertical: 10,
+  paddingHorizontal: 18,
+  borderRadius: 18,
+},
+
+smallButtonText: {
+  color: '#FFFFFF',
+  fontWeight: '800',
+  fontSize: 15,
+},
+
+journalInput: {
+  width: '100%',
+  minHeight: 180,
+  backgroundColor: '#1E293B',
+  borderRadius: 24,
+  padding: 20,
+  color: '#FFFFFF',
+  fontSize: 17,
+  textAlignVertical: 'top',
+  marginBottom: 24,
+},
+
+entryCard: {
+  width: '100%',
+  backgroundColor: '#1E293B',
+  borderRadius: 24,
+  padding: 20,
+  marginBottom: 18,
+},
+
+moodRow: {
+  flexDirection: 'row',
+  gap: 14,
+  marginBottom: 24,
+},
+
+moodBubble: {
+  width: 70,
+  height: 70,
+  borderRadius: 35,
+  backgroundColor: '#1E293B',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+
+selectedMoodBubble: {
+  backgroundColor: '#3B82F6',
+},
+
+moodEmoji: {
+  fontSize: 30,
+},
+
+themeRow: {
+  flexDirection: 'row',
+  gap: 18,
+  marginBottom: 30,
+},
+
+themeBubble: {
+  width: 80,
+  height: 80,
+  borderRadius: 40,
+  backgroundColor: '#1E293B',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+
+themeEmoji: {
+  fontSize: 34,
+},
 
 buttonText: {
   color: '#FFFFFF',
