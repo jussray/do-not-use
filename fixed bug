@@ -985,6 +985,7 @@ if (screen === 'parentBridge') {
 
     </ScrollView>
   );
+}
 
   if (screen === 'comfort') {
     return (
