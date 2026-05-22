@@ -872,4 +872,4 @@ reactionText: {
     activeNavText: {
     color: '#FFFFFF',
   },
-});
+};
