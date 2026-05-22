@@ -187,23 +187,33 @@ const changeMessage = () => {
 };
   
 const BottomNav = () => (
-    <View style={styles.bottomNav}>
-     {[
-  ['home', '🏠', 'Home'],
-  ['journal', '📝', 'Journal'],
-  ['calm', '🌙', 'Calm'],
-  ['voice', '🎙️', 'Voice'],
-  ['more', '☰', 'More'],
-].map((item) => (
-        <TouchableOpacity key={item[0]} onPress={() => setScreen(item[0])} style={styles.navItem}>
-          <Text style={styles.navIcon}>{item[1]}</Text>
-          <Text style={[styles.navText, screen === item[0] && styles.activeNavText]}>
-            {item[2]}
-          </Text>
-        </TouchableOpacity>
-      ))}
-    </View>
-  );
+  <View style={styles.bottomNav}>
+    {[
+      ['home', '🏠', 'Home'],
+      ['pages', '💜', 'Pages'],
+      ['calm', '🌙', 'Calm'],
+      ['circle', '🌐', 'Circle'],
+      ['more', '☰', 'More'],
+    ].map((item) => (
+      <TouchableOpacity
+        key={item[0]}
+        onPress={() => setScreen(item[0])}
+        style={styles.navItem}
+      >
+        <Text style={styles.navIcon}>{item[1]}</Text>
+
+        <Text
+          style={[
+            styles.navText,
+            screen === item[0] && styles.activeNavText,
+          ]}
+        >
+          {item[2]}
+        </Text>
+      </TouchableOpacity>
+    ))}
+  </View>
+);
 
   if (screen === 'journal') {
     return (
