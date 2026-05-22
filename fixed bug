@@ -368,6 +368,36 @@ if (screen === 'mindReset') {
     </ScrollView>
   );
 }
+if (screen === 'bodyReset') {
+  return (
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
+      <Text style={styles.logo}>Se’kret Bip</Text>
+      <Text style={styles.welcome}>🫧 7-Min Body Reset</Text>
+      <Text style={styles.subtitle}>Move the stress out softly.</Text>
+
+      <View style={styles.messageCard}>
+        <Text style={styles.cardEmoji}>🫧</Text>
+        <Text style={styles.cardText}>No workout pressure. Just loosen up.</Text>
+      </View>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>1️⃣ Roll your neck slowly.</Text>
+        <Text style={styles.entryText}>2️⃣ Shrug your shoulders up, then drop them.</Text>
+        <Text style={styles.entryText}>3️⃣ Shake your hands out.</Text>
+        <Text style={styles.entryText}>4️⃣ Stretch your arms over your head.</Text>
+        <Text style={styles.entryText}>5️⃣ Walk around the room for one minute.</Text>
+        <Text style={styles.entryText}>6️⃣ Do a tiny dance break. Yes, really 😭</Text>
+        <Text style={styles.entryText}>7️⃣ One deep breath. Tell your body thank you.</Text>
+      </View>
+
+      <TouchableOpacity style={styles.button} onPress={() => setScreen('calm')}>
+        <Text style={styles.buttonText}>Back to Bip Calmly 🌙</Text>
+      </TouchableOpacity>
+
+      <BottomNav />
+    </ScrollView>
+  );
+}
 
   if (screen === 'growth') {
     return (
