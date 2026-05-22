@@ -869,7 +869,7 @@ reactionText: {
     marginTop: 4,
   },
 
-    activeNavText: {
-        color: '#FFFFFF',
+      activeNavText: {
+    color: '#FFFFFF',
   },
-};
+});
