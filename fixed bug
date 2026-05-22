@@ -1170,32 +1170,179 @@ if (screen === 'parentBridge') {
 }
 
   if (screen === 'settings') {
-    return (
-      <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
-        <Text style={styles.logo}>Se’kret Bip</Text>
-        <Text style={styles.welcome}>Settings ⚙️</Text>
-        <Text style={styles.subtitle}>Choose your Bip vibe.</Text>
+  return (
+    <ScrollView
+      contentContainerStyle={[
+        styles.container,
+        { backgroundColor: getBackground() },
+      ]}
+    >
 
-        <View style={styles.themeRow}>
-          <TouchableOpacity style={styles.themeBubble} onPress={() => setTheme('night')}>
-            <Text style={styles.themeEmoji}>🌙</Text>
-          </TouchableOpacity>
+      <Text style={styles.logo}>Se’kret Bip</Text>
 
-          <TouchableOpacity style={styles.themeBubble} onPress={() => setTheme('flower')}>
-            <Text style={styles.themeEmoji}>🌸</Text>
-          </TouchableOpacity>
+      <Text style={styles.welcome}>⚙️ Settings</Text>
 
-          <TouchableOpacity style={styles.themeBubble} onPress={() => setTheme('rain')}>
-            <Text style={styles.themeEmoji}>🌧️</Text>
-          </TouchableOpacity>
-        </View>
+      <Text style={styles.subtitle}>
+        Customize your Bip world.
+      </Text>
 
-        <Text style={styles.currentMood}>Current Theme: {theme}</Text>
+      <Text style={styles.sectionTitle}>
+        🌈 Theme Vibes
+      </Text>
 
-        <BottomNav />
-      </ScrollView>
-    );
-  }
+      <View style={styles.statsRow}>
+
+        <TouchableOpacity
+          style={styles.statCard}
+          onPress={() => setTheme('flower')}
+        >
+          <Text style={styles.statEmoji}>🌸</Text>
+
+          <Text style={styles.statLabel}>
+            Neon Pink
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.statCard}
+          onPress={() => setTheme('rain')}
+        >
+          <Text style={styles.statEmoji}>🌧️</Text>
+
+          <Text style={styles.statLabel}>
+            Neon Blue
+          </Text>
+        </TouchableOpacity>
+
+      </View>
+
+      <View style={styles.statsRow}>
+
+        <TouchableOpacity
+          style={styles.statCard}
+          onPress={() => setTheme('forest')}
+        >
+          <Text style={styles.statEmoji}>🍀</Text>
+
+          <Text style={styles.statLabel}>
+            Neon Green
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.statCard}
+          onPress={() => setTheme('lavender')}
+        >
+          <Text style={styles.statEmoji}>🪻</Text>
+
+          <Text style={styles.statLabel}>
+            Lavender Glow
+          </Text>
+        </TouchableOpacity>
+
+      </View>
+
+      <Text style={styles.sectionTitle}>
+        🌍 Language
+      </Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>
+          🇺🇸 English
+        </Text>
+
+        <Text style={styles.entryText}>
+          🇪🇸 Español
+        </Text>
+
+        <Text style={styles.entryText}>
+          🇫🇷 Français
+        </Text>
+
+        <Text style={styles.entryText}>
+          🇵🇹 Português
+        </Text>
+
+        <Text style={styles.entryText}>
+          🇭🇹 Kreyòl
+        </Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>
+        🌙 Soft Shutdown
+      </Text>
+
+      <View style={styles.parentBridgeCard}>
+
+        <Text style={styles.cardEmoji}>🌙</Text>
+
+        <Text style={styles.cardText}>
+          Night protection is ON
+        </Text>
+
+        <Text style={styles.bridgeText}>
+          Bip Calmly stays open after 10PM.
+        </Text>
+
+        <Text style={styles.bridgeText}>
+          Other spaces gently dim for rest.
+        </Text>
+
+      </View>
+
+      <Text style={styles.sectionTitle}>
+        🔐 Privacy Controls
+      </Text>
+
+      <View style={styles.entryCard}>
+
+        <Text style={styles.entryText}>
+          ✍️ Se’kret Pages locked
+        </Text>
+
+        <Text style={styles.entryText}>
+          🎙️ Voice notes protected
+        </Text>
+
+        <Text style={styles.entryText}>
+          💜 Shared Parent Bridge only
+        </Text>
+
+        <Text style={styles.entryText}>
+          🌐 Bip Circle anonymous mode
+        </Text>
+
+      </View>
+
+      <Text style={styles.sectionTitle}>
+        ✨ Coming Soon
+      </Text>
+
+      <View style={styles.entryCard}>
+
+        <Text style={styles.entryText}>
+          🎨 Moodboard stickers
+        </Text>
+
+        <Text style={styles.entryText}>
+          📸 Memory walls
+        </Text>
+
+        <Text style={styles.entryText}>
+          🎵 Music reactions
+        </Text>
+
+        <Text style={styles.entryText}>
+          🌌 Custom room aesthetics
+        </Text>
+
+      </View>
+
+      <BottomNav />
+
+    </ScrollView>
+  );
+}
 
   return (
     <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
