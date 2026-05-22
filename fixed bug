@@ -985,7 +985,8 @@ if (screen === 'parentBridge') {
 
     </ScrollView>
   );
-}n === 'comfort') {
+
+  if (screen === 'comfort') {
     return (
       <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
         <Text style={styles.logo}>Se’kret Bip</Text>
