@@ -1,0 +1,8 @@
+```js
+const styles = StyleSheet.create({
+  // your styles...
+  activeNavText: {
+    color: '#FFFFFF',
+  },
+});
+```
