@@ -838,8 +838,11 @@ if (screen === 'bity') {
         <Text style={styles.bridgeText}>
           Communication streak: 5 days
         </Text>
-
-        <TouchableOpacity style={styles.button}>
+  
+    <TouchableOpacity
+  style={styles.button}
+  onPress={() => setScreen('parentBridge')}
+>
           <Text style={styles.buttonText}>
             Open Parent Bridge
           </Text>
