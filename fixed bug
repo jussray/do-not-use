@@ -356,7 +356,55 @@ const BottomNav = () => (
 
     </ScrollView>
   );
+}  );
 }
+
+  if (screen === 'journal') {
+  return (
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
+      <Text style={styles.logo}>Se’kret Bip</Text>
+
+      <Text style={styles.welcome}>✍️ Write It Out</Text>
+
+      <Text style={styles.subtitle}>
+        A private page for whatever your heart needs to say.
+      </Text>
+
+      <TextInput
+        style={styles.journalInput}
+        placeholder="Write your Se’kret here..."
+        placeholderTextColor="#94A3B8"
+        multiline
+        value={journalText}
+        onChangeText={setJournalText}
+      />
+
+      <TouchableOpacity style={styles.button} onPress={saveEntry}>
+        <Text style={styles.buttonText}>Save Page 💜</Text>
+      </TouchableOpacity>
+
+      <Text style={styles.sectionTitle}>Saved Pages</Text>
+
+      {entries.map((entry) => (
+        <View key={entry.id} style={styles.entryCard}>
+          <Text style={styles.entryDate}>
+            {entry.date} • {entry.time} • {entry.mood}
+          </Text>
+
+          <Text style={styles.entryText}>{entry.text}</Text>
+        </View>
+      ))}
+
+      <TouchableOpacity style={styles.button} onPress={() => setScreen('pages')}>
+        <Text style={styles.buttonText}>Back to Se’kret Pages 💜</Text>
+      </TouchableOpacity>
+
+      <BottomNav />
+    </ScrollView>
+  );
+}
+
+if (screen === 'calm') {
 
  if (screen === 'calm') {
   return (
