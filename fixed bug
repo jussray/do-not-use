@@ -1343,8 +1343,63 @@ if (screen === 'parentBridge') {
     </ScrollView>
   );
 }
+ 
+ if (screen === 'supportAlerts') {
+  return (
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
+      <Text style={styles.logo}>Se’kret Bip</Text>
 
-  if (screen === 'comfort') {
+      <Text style={styles.welcome}>🚨 Support Alerts</Text>
+
+      <Text style={styles.subtitle}>
+        Care signals, not punishment.
+      </Text>
+
+      <View style={styles.parentBridgeCard}>
+        <Text style={styles.cardEmoji}>🌙</Text>
+
+        <Text style={styles.cardText}>
+          No emergency alerts right now.
+        </Text>
+
+        <Text style={styles.bridgeText}>
+          If Se’kret notices a moment that needs grown-up support, it appears here with gentle next steps.
+        </Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>Example Care Signal</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>
+          💜 Teen may need a softer check-in tonight.
+        </Text>
+
+        <Text style={styles.entryText}>
+          Try: “I’m not mad. I just want to understand what support feels best right now.”
+        </Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>Emergency Conversation Kit</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>1️⃣ Start calm.</Text>
+        <Text style={styles.entryText}>2️⃣ Ask before advising.</Text>
+        <Text style={styles.entryText}>3️⃣ Offer presence, not pressure.</Text>
+      </View>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setScreen('parentPortal')}
+      >
+        <Text style={styles.buttonText}>
+          Back to Parent Portal 👨‍👩‍👧
+        </Text>
+      </TouchableOpacity>
+
+      <BottomNav />
+    </ScrollView>
+  );
+}  if (screen === 'comfort') {
     return (
       <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
         <Text style={styles.logo}>Se’kret Bip</Text>
