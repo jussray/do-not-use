@@ -23,6 +23,10 @@ export default function App() {
   const [moodHistory, setMoodHistory] = useState([]);
   const [voiceNotes, setVoiceNotes] = useState([]);
   const [messageIndex, setMessageIndex] = useState(0);
+  const [userRole, setUserRole] = useState('teen');
+  const [sharedMoments, setSharedMoments] = useState([]);
+  const [supportAlerts, setSupportAlerts] = useState([]);
+  const [parentMessages, setParentMessages] = useState([]);
   const breatheAnim = useRef(new Animated.Value(1)).current;
   const comfortMessages = [
     { emoji: '🌙', text: "You've survived every hard day so far. That matters." },
