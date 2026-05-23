@@ -1046,7 +1046,8 @@ if (screen === 'bity') {
 
     </ScrollView>
   );
-}if (screen === 'parentPortal') {
+}
+ if (screen === 'parentPortal') {
   return (
     <ScrollView
       contentContainerStyle={[
