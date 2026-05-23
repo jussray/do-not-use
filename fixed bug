@@ -357,7 +357,6 @@ const BottomNav = () => (
     </ScrollView>
   );
 }  );
-}
 
   if (screen === 'journal') {
   return (
@@ -403,8 +402,6 @@ const BottomNav = () => (
     </ScrollView>
   );
 }
-
-if (screen === 'calm') {
 
  if (screen === 'calm') {
   return (
