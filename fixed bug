@@ -1289,6 +1289,59 @@ if (screen === 'parentBridge') {
     </ScrollView>
   );
 }
+ 
+ if (screen === 'conversationKits') {
+  return (
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
+      <Text style={styles.logo}>Se’kret Bip</Text>
+
+      <Text style={styles.welcome}>🧠 Conversation Kits</Text>
+
+      <Text style={styles.subtitle}>
+        Softer words for hard moments.
+      </Text>
+
+      <View style={styles.messageCard}>
+        <Text style={styles.cardEmoji}>💜</Text>
+
+        <Text style={styles.cardText}>
+          The goal is connection, not winning.
+        </Text>
+      </View>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>
+          Instead of: “What’s wrong with you?”
+        </Text>
+
+        <Text style={styles.entryText}>
+          Try: “I can tell something feels heavy. Want space or support?”
+        </Text>
+      </View>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>
+          Instead of: “You never talk to me.”
+        </Text>
+
+        <Text style={styles.entryText}>
+          Try: “I miss hearing your thoughts. No pressure, I’m here.”
+        </Text>
+      </View>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setScreen('parentPortal')}
+      >
+        <Text style={styles.buttonText}>
+          Back to Parent Portal 👨‍👩‍👧
+        </Text>
+      </TouchableOpacity>
+
+      <BottomNav />
+    </ScrollView>
+  );
+}
 
   if (screen === 'comfort') {
     return (
