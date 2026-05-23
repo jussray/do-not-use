@@ -1096,13 +1096,14 @@ if (screen === 'bity') {
   </Text>
 </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.button}
-      >
-        <Text style={styles.buttonText}>
-          🧠 Conversation Kits
-        </Text>
-      </TouchableOpacity>
+ <TouchableOpacity
+  style={styles.button}
+  onPress={() => setScreen('conversationKits')}
+>
+  <Text style={styles.buttonText}>
+    🧠 Conversation Kits
+  </Text>
+</TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
