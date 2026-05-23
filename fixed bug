@@ -1088,12 +1088,13 @@ if (screen === 'bity') {
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.button}
-      >
-        <Text style={styles.buttonText}>
-          💭 Parent Reflections
-        </Text>
-      </TouchableOpacity>
+  style={styles.button}
+  onPress={() => setScreen('parentReflections')}
+>
+  <Text style={styles.buttonText}>
+    💭 Parent Reflections
+  </Text>
+</TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
@@ -1226,6 +1227,64 @@ if (screen === 'parentBridge') {
       </TouchableOpacity>
 
       <BottomNav />
+    </ScrollView>
+  );
+}
+ 
+ if (screen === 'parentReflections') {
+  return (
+    <ScrollView
+      contentContainerStyle={[
+        styles.container,
+        { backgroundColor: getBackground() },
+      ]}
+    >
+
+      <Text style={styles.logo}>Se’kret Bip</Text>
+
+      <Text style={styles.welcome}>💭 Parent Reflections</Text>
+
+      <Text style={styles.subtitle}>
+        A private space for parents to pause, reflect, and respond with care.
+      </Text>
+
+      <View style={styles.messageCard}>
+
+        <Text style={styles.cardEmoji}>💜</Text>
+
+        <Text style={styles.cardText}>
+          Parenting while emotionally exhausted is still parenting.
+        </Text>
+
+      </View>
+
+      <View style={styles.entryCard}>
+
+        <Text style={styles.entryText}>
+          ✍️ Reflect before reacting.
+        </Text>
+
+        <Text style={styles.entryText}>
+          🌙 Your child may need safety before solutions.
+        </Text>
+
+        <Text style={styles.entryText}>
+          🧠 Curiosity connects better than pressure.
+        </Text>
+
+      </View>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setScreen('parentPortal')}
+      >
+        <Text style={styles.buttonText}>
+          Back to Parent Portal 👨‍👩‍👧
+        </Text>
+      </TouchableOpacity>
+
+      <BottomNav />
+
     </ScrollView>
   );
 }
