@@ -1105,13 +1105,14 @@ if (screen === 'bity') {
   </Text>
 </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.button}
-      >
-        <Text style={styles.buttonText}>
-          🚨 Support Alerts
-        </Text>
-      </TouchableOpacity>
+     <TouchableOpacity
+  style={styles.button}
+  onPress={() => setScreen('supportAlerts')}
+>
+  <Text style={styles.buttonText}>
+    🚨 Support Alerts
+  </Text>
+</TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
