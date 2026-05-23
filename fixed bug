@@ -352,11 +352,11 @@ const BottomNav = () => (
 
       </View>
 
-      <BottomNav />
+            <BottomNav />
 
     </ScrollView>
   );
-}  );
+}
 
   if (screen === 'journal') {
   return (
