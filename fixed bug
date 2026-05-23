@@ -1114,13 +1114,14 @@ if (screen === 'bity') {
   </Text>
 </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.button}
-      >
-        <Text style={styles.buttonText}>
-          🌱 Shared Growth
-        </Text>
-      </TouchableOpacity>
+      <<TouchableOpacity
+  style={styles.button}
+  onPress={() => setScreen('sharedGrowth')}
+>
+  <Text style={styles.buttonText}>
+    🌱 Shared Growth
+  </Text>
+</TouchableOpacity>
 
       <BottomNav />
 
