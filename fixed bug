@@ -1559,11 +1559,26 @@ if (screen === 'sharedGrowth') {
       ? '🔄 Switch to Parent Mode'
       : '🔄 Switch to Teen Mode'}
   </Text>
-<TouchableOpacity style={styles.button} onPress={switchRole}>
+</TouchableOpacity>
+
+<TouchableOpacity
+  style={[
+    styles.button,
+    userRole === 'teen' && {
+      backgroundColor: '#475569',
+      opacity: 0.6,
+    },
+  ]}
+  onPress={() => {
+    if (userRole === 'parent') {
+      setScreen('parentPortal');
+    }
+  }}
+>
   <Text style={styles.buttonText}>
     {userRole === 'teen'
-      ? '🔄 Switch to Parent Mode'
-      : '🔄 Switch to Teen Mode'}
+      ? '🔒 Parent Portal'
+      : '👨‍👩‍👧 Parent Portal'}
   </Text>
 </TouchableOpacity>
 
