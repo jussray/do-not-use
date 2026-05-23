@@ -1,0 +1,95 @@
+ParentPortalScreen.js
+import React from 'react';
+import ParentPortalScreen from './screens/ParentPortalScreen';
+import {
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+
+export default function ParentPortalScreen({
+  styles,
+  getBackground,
+  setScreen,
+  BottomNav,
+}) {
+  return (
+    <ScrollView
+      contentContainerStyle={[
+        styles.container,
+        { backgroundColor: getBackground() },
+      ]}
+    >
+
+      <Text style={styles.logo}>Se’kret Bip</Text>
+
+      <Text style={styles.welcome}>👨‍👩‍👧 Parent Portal</Text>
+
+      <Text style={styles.subtitle}>
+        Support without pressure. Connection without control.
+      </Text>
+
+      <View style={styles.parentBridgeCard}>
+
+        <Text style={styles.cardEmoji}>💜</Text>
+
+        <Text style={styles.cardText}>
+          Your role is support, not surveillance.
+        </Text>
+
+        <Text style={styles.bridgeText}>
+          Se’kret Bip protects private emotional spaces while helping families communicate better.
+        </Text>
+
+      </View>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setScreen('parentBridge')}
+      >
+        <Text style={styles.buttonText}>
+          💜 Se’krets 2 Tell
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setScreen('parentReflections')}
+      >
+        <Text style={styles.buttonText}>
+          💭 Parent Reflections
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setScreen('conversationKits')}
+      >
+        <Text style={styles.buttonText}>
+          🧠 Conversation Kits
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setScreen('supportAlerts')}
+      >
+        <Text style={styles.buttonText}>
+          🚨 Support Alerts
+        </Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => setScreen('sharedGrowth')}
+      >
+        <Text style={styles.buttonText}>
+          🌱 Shared Growth
+        </Text>
+      </TouchableOpacity>
+
+      <BottomNav />
+
+    </ScrollView>
+  )
