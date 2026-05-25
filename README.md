@@ -238,7 +238,7 @@ const changeMessage = () => {
           <Text style={styles.cardText}>Inhale. Hold. Exhale. Stay with the Bip.</Text>
         </View>
 
-        <BottomNav />
+      <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
       </ScrollView>
     );
   }
@@ -261,7 +261,7 @@ const changeMessage = () => {
           <Text style={styles.entryText}>🌱 Write one honest sentence</Text>
         </View>
 
-        <BottomNav />
+       <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
       </ScrollView>
     );
   }
@@ -287,7 +287,7 @@ const changeMessage = () => {
           ))
         )}
 
-        <BottomNav />
+      <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
       </ScrollView>
     );
   }
@@ -434,7 +434,7 @@ const changeMessage = () => {
         ))
       )}
 
-      <BottomNav />
+     <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
     </ScrollView>
   );
 }
@@ -521,7 +521,7 @@ if (screen === 'circle') {
         ))
       )}
 
-      <BottomNav />
+          <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
     </ScrollView>
   );
 }
@@ -545,7 +545,7 @@ if (screen === 'circle') {
           <Text style={styles.entryText}>4. Tap Calm if you need to breathe.</Text>
         </View>
 
-        <BottomNav />
+       <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
       </ScrollView>
     );
   }
@@ -593,7 +593,7 @@ if (screen === 'circle') {
         <Text style={styles.buttonText}>⚙️ Settings</Text>
       </TouchableOpacity>
 
-      <BottomNav />
+     <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
     </ScrollView>
   );
 }
@@ -621,7 +621,7 @@ if (screen === 'circle') {
 
         <Text style={styles.currentMood}>Current Theme: {theme}</Text>
 
-        <BottomNav />
+      <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
       </ScrollView>
     );
   }
@@ -663,7 +663,7 @@ if (screen === 'circle') {
 
       <Text style={styles.currentMood}>Current Mood: {mood}</Text>
 
-      <BottomNav />
+     <BottomNav screen={screen} setScreen={setScreen} styles={styles} />
     </ScrollView>
   );
 }
