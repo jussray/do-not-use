@@ -849,7 +849,7 @@ reactionText: {
     fontWeight: '700',
     textAlign: 'center',
     marginTop: 4,
-  },
+  }
   }
     const styles = StyleSheet.create({
 
