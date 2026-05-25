@@ -686,28 +686,116 @@ if (screen === 'bodyReset') {
   );
 }
 
-  if (screen === 'growth') {
-    return (
-      <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
-        <Text style={styles.logo}>Se’kret Bip</Text>
-        <Text style={styles.welcome}>Growth Garden 🌱</Text>
-        <Text style={styles.subtitle}>Tiny steps still count. Your growth does not have to be loud.</Text>
+if (screen === 'growth') {
+  const moodEngine = getMoodEngine();
+  const bippin2Path = getBippin2Path();
 
-        <View style={styles.messageCard}>
-          <Text style={styles.cardEmoji}>🌿</Text>
-          <Text style={styles.cardText}>Today’s growth: showing up for yourself.</Text>
-        </View>
+  const emotionalImpactTotal = circlePosts.reduce(
+    (total, post) => total + (post.emotionalImpact || 0),
+    0
+  );
 
-        <View style={styles.entryCard}>
-          <Text style={styles.entryText}>🌱 Drink water</Text>
-          <Text style={styles.entryText}>🌱 Take one soft breath</Text>
-          <Text style={styles.entryText}>🌱 Write one honest sentence</Text>
-        </View>
+  const supportEnergyTotal = circlePosts.reduce(
+    (total, post) => total + (post.supportEnergy || 0),
+    0
+  );
 
-        <BottomNav />
-      </ScrollView>
-    );
-  }
+  const comfortLevelTotal = circlePosts.reduce(
+    (total, post) => total + (post.comfortLevel || 0),
+    0
+  );
+
+  return (
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
+      <Text style={styles.logo}>Se’kret Bip</Text>
+
+      <Text style={styles.welcome}>🌱 Bippin2</Text>
+
+      <Text style={styles.subtitle}>
+        Your growth space changes from your Home mood and your growth path.
+      </Text>
+
+      <View style={styles.bityHeroCard}>
+        <Text style={styles.bityHeroEmoji}>{moodEngine.emoji}</Text>
+        <Text style={styles.bityHeroTitle}>{moodEngine.title}</Text>
+        <Text style={styles.bityHeroText}>{moodEngine.message}</Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>✨ Current Growth Room</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>🏠 {moodEngine.room}</Text>
+        <Text style={styles.entryText}>💜 Mood signal: {mood}</Text>
+        <Text style={styles.entryText}>🌱 Next step: {moodEngine.action}</Text>
+        <Text style={styles.entryText}>🧭 Path: {bippin2Path.label}</Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>🫧 Body + Puberty Support</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>{bippin2Path.bodySupport}</Text>
+        <Text style={styles.entryText}>{bippin2Path.bodyText}</Text>
+        <Text style={styles.entryDate}>
+          Private growth support. Not shared with Parent Bridge.
+        </Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>⚡ Confidence Growth</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>{bippin2Path.confidenceText}</Text>
+        <Text style={styles.entryText}>✨ Today’s reminder: you are becoming, not failing.</Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>📈 Mood Trackboard</Text>
+
+      <View style={styles.entryCard}>
+        {moodHistory.length === 0 ? (
+          <Text style={styles.entryText}>
+            Choose moods on Home and Se’kret will show your patterns here.
+          </Text>
+        ) : (
+          moodHistory.slice(0, 5).map((item) => (
+            <Text key={item.id} style={styles.entryText}>
+              {item.mood} • {item.date}
+            </Text>
+          ))
+        )}
+      </View>
+
+      <Text style={styles.sectionTitle}>🌐 Private Circle Impact</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>💜 Emotional Impact: {emotionalImpactTotal}</Text>
+        <Text style={styles.entryText}>🫂 Support Energy: {supportEnergyTotal}</Text>
+        <Text style={styles.entryText}>🌙 Comfort Given: {comfortLevelTotal}</Text>
+        <Text style={styles.entryDate}>
+          These numbers are for you — not the whole world.
+        </Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>🌱 Becoming Areas</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>💬 Social + Boundaries Growth</Text>
+        <Text style={styles.entryText}>✨ Future Self</Text>
+        <Text style={styles.entryText}>🧠 Emotional Intelligence</Text>
+        <Text style={styles.entryText}>🌙 Rest + Routine Growth</Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>💜 Quiet Progress</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>✍️ Pages saved: {entries.length}</Text>
+        <Text style={styles.entryText}>🎙️ Voice Bips saved: {voiceNotes.length}</Text>
+        <Text style={styles.entryText}>📈 Mood check-ins: {moodHistory.length}</Text>
+        <Text style={styles.entryText}>🌐 Circle posts: {circlePosts.length}</Text>
+      </View>
+
+      <BottomNav />
+    </ScrollView>
+  );
+}
 
   if (screen === 'history') {
     return (
