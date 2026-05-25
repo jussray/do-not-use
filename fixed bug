@@ -175,7 +175,25 @@ const getBackground = () => {
     };
 
     setMoodHistory([newMoodEntry, ...moodHistory]);
-  }; 
+  };
+   
+  const getBippin2Path = () => {
+  if (growthPath === 'girl') {
+    return {
+      label: 'Girl Growth Path',
+      bodySupport: '🩸 Cycle Support',
+      bodyText: 'Periods, cramps, body changes, energy shifts, hygiene, and confidence.',
+      confidenceText: 'Body confidence, friendship pressure, boundaries, and self-worth.',
+    };
+  }
+
+  return {
+    label: 'Boy Growth Path',
+    bodySupport: '⚡ Body Change Support',
+    bodyText: 'Voice changes, body growth, hygiene, energy, movement, and confidence.',
+    confidenceText: 'Pressure, anger, loneliness, confidence, and learning to express feelings safely.',
+  };
+};
   
   const saveEntry = () => {
   if (journalText.trim() === '') return;
