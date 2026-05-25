@@ -670,7 +670,7 @@ if (screen === 'circle') {
     </ScrollView>
   );
 }
-
+}
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
