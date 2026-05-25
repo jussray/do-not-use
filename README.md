@@ -1,6 +1,7 @@
 # Se-kret-Bip
- import React, { useState, useEffect, useRef } from 'react'; 
- import {
+import React, { useState, useEffect, useRef } from 'react'; 
+import BottomNav from './components/BottomNav';
+import {
   Text,
   StyleSheet,
   TouchableOpacity,
