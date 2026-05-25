@@ -1797,13 +1797,6 @@ if (screen === 'sharedGrowth') {
       >
         <Text style={styles.buttonText}>🌱 Growth Garden</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => setScreen('history')}
-      >
-        <Text style={styles.buttonText}>📈 Mood History</Text>
-      </TouchableOpacity>
       
     <TouchableOpacity
   style={[
