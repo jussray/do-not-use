@@ -187,6 +187,19 @@ const reactToPost = (postId, reactionType) => {
               ...post.reactions,
               [reactionType]: post.reactions[reactionType] + 1,
             },
+
+  emotionalImpact: post.emotionalImpact + 1,
+
+  supportEnergy:
+  reactionType === 'heart'
+    ? post.supportEnergy + 1
+    : post.supportEnergy,
+
+comfortLevel:
+  reactionType === 'moon'
+    ? post.comfortLevel + 1
+    : post.comfortLevel,
+
           }
         : post
     )
