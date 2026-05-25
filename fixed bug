@@ -1480,28 +1480,115 @@ if (screen === 'sharedGrowth') {
     </ScrollView>
   );
 }  if (screen === 'comfort') {
-    return (
-      <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
-        <Text style={styles.logo}>Se’kret Bip</Text>
-        <Text style={styles.welcome}>Comfort Mode 🚨</Text>
-        <Text style={styles.subtitle}>When it feels heavy, Bip stays with you.</Text>
+  return (
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
+      <Text style={styles.logo}>Se’kret Bip</Text>
 
-        <View style={styles.messageCard}>
-          <Text style={styles.cardEmoji}>💙</Text>
-          <Text style={styles.cardText}>You are not alone in this moment.</Text>
-        </View>
+      <Text style={styles.welcome}>🚨 Extra Support</Text>
 
-        <View style={styles.entryCard}>
-          <Text style={styles.entryText}>1. Put both feet on the floor.</Text>
-          <Text style={styles.entryText}>2. Name 3 things you can see.</Text>
-          <Text style={styles.entryText}>3. Take one slow breath.</Text>
-          <Text style={styles.entryText}>4. Tap Calm if you need to breathe.</Text>
-        </View>
+      <Text style={styles.subtitle}>
+        When it feels too loud, Se’kret stays with you.
+      </Text>
 
-        <BottomNav />
-      </ScrollView>
-    );
-  }
+      <Animated.View
+        style={[
+          styles.circle,
+          { transform: [{ scale: breatheAnim }], backgroundColor: '#7C3AED' },
+        ]}
+      >
+        <Text style={styles.circleText}>Stay</Text>
+      </Animated.View>
+
+      <View style={styles.messageCard}>
+        <Text style={styles.cardEmoji}>💜</Text>
+        <Text style={styles.cardText}>
+          You do not have to handle this moment perfectly.
+        </Text>
+      </View>
+
+      <Text style={styles.sectionTitle}>🫧 Ground Right Now</Text>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>1️⃣ Put both feet on the floor.</Text>
+        <Text style={styles.entryText}>2️⃣ Name 3 things you can see.</Text>
+        <Text style={styles.entryText}>3️⃣ Touch something soft or solid.</Text>
+        <Text style={styles.entryText}>4️⃣ Take one slow breath.</Text>
+        <Text style={styles.entryText}>5️⃣ Say: “This moment will pass.”</Text>
+      </View>
+
+      <Text style={[styles.sectionTitle, { alignSelf: 'center', textAlign: 'center' }]}>
+        💬 What do you need?
+      </Text>
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>🌙 I need calm</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>💜 I need comfort</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>🫂 I need someone</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={() => setScreen('musicVibes')}>
+        <Text style={styles.buttonText}>🎵 I need music</Text>
+      </TouchableOpacity>
+
+      <View style={styles.parentBridgeCard}>
+        <Text style={styles.cardEmoji}>🎵</Text>
+        <Text style={styles.cardText}>Page Vibes</Text>
+        <Text style={styles.bridgeText}>
+          Future idea: Se’kret can let songs play softly in the background of certain pages.
+        </Text>
+        <Text style={styles.bridgeText}>
+          MySpace energy, but calmer and safer.
+        </Text>
+      </View>
+
+      <TouchableOpacity style={styles.button} onPress={() => setScreen('calm')}>
+        <Text style={styles.buttonText}>Back to Bip Calmly 🌙</Text>
+      </TouchableOpacity>
+
+      <BottomNav />
+    </ScrollView>
+  );
+}if (screen === 'musicVibes') {
+  return (
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: getBackground() }]}>
+      <Text style={styles.logo}>Se’kret Bip</Text>
+
+      <Text style={styles.welcome}>🎵 Music Vibes</Text>
+
+      <Text style={styles.subtitle}>
+        Pick the sound your page needs.
+      </Text>
+
+      <View style={styles.parentBridgeCard}>
+        <Text style={styles.cardEmoji}>🎧</Text>
+        <Text style={styles.cardText}>Se’kret Soundtrack</Text>
+        <Text style={styles.bridgeText}>
+          Later, this can connect to Spotify or Apple Music and suggest songs based on your mood.
+        </Text>
+      </View>
+
+      <View style={styles.entryCard}>
+        <Text style={styles.entryText}>🏠 Home: soft welcome track</Text>
+        <Text style={styles.entryText}>💜 Pages: diary writing track</Text>
+        <Text style={styles.entryText}>🌙 Bip Calmly: calm ambient track</Text>
+        <Text style={styles.entryText}>🚨 Extra Support: grounding track</Text>
+        <Text style={styles.entryText}>🌐 Bip Circle: late-night community track</Text>
+      </View>
+
+      <TouchableOpacity style={styles.button} onPress={() => setScreen('comfort')}>
+        <Text style={styles.buttonText}>Back to Extra Support 🚨</Text>
+      </TouchableOpacity>
+
+      <BottomNav />
+    </ScrollView>
+  );
+}
 
   if (screen === 'more') {
   return (
@@ -1580,13 +1667,6 @@ if (screen === 'sharedGrowth') {
       ? '🔒 Parent Portal'
       : '👨‍👩‍👧 Parent Portal'}
   </Text>
-</TouchableOpacity>
-
-<TouchableOpacity
-  style={styles.button}
-  onPress={() => setScreen('comfort')}
->
-  <Text style={styles.buttonText}>🚨 Comfort Mode</Text>
 </TouchableOpacity>
 
       <TouchableOpacity
