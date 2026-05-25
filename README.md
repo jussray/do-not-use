@@ -185,9 +185,6 @@ const reactToPost = (postId, reactionType) => {
 };
 
 const changeMessage = () => {
-
-
-const changeMessage = () => {
   setMessageIndex((prevIndex) => (prevIndex + 1) % comfortMessages.length);
 };
 
@@ -850,15 +847,15 @@ reactionText: {
     textAlign: 'center',
     marginTop: 4,
   }
-  }
-    const styles = StyleSheet.create({
-
-  ...
-
-  activeNavText: {
-
-    color: '#FFFFFF',
-
+   navText: {
+    color: '#E2E8F0',
+    fontSize: 14,
+    fontWeight: '700',
+    textAlign: 'center',
+    marginTop: 4,
   },
 
+  activeNavText: {
+    color: '#FFFFFF',
+  },
 });
