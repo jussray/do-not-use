@@ -632,7 +632,7 @@ if (screen === 'bodyReset') {
 }
 
 if (screen === 'growth') {
-  const moodEngine = getMoodEngine();
+  const moodEngine = getMoodEngine(mood);
   const bippin2Path = getBippin2Path();
 
   const emotionalImpactTotal = circlePosts.reduce(
